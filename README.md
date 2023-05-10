@@ -6,7 +6,7 @@ This postman collection is a sample set of Sinch Voice API request using applica
 
 ### Requirements
 
-- [Postman](https://www.postman.com/downloads/) or later
+- [Postman](https://www.postman.com/downloads/)
 
 ### Install
 
