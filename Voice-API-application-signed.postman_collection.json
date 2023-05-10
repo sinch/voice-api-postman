@@ -1,0 +1,350 @@
+{
+	"info": {
+		"name": "Voice-API-application-signed.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ConferenceCallout username",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"method\": \"conferenceCallout\",\n    \"conferenceCallout\": {\n        \"cli\": \"<<Your verified / Dashboard purchased number>>\",\n        \"destination\": {\n            \"type\": \"Username\",\n            \"endpoint\": \"<<Your Sinch InApp SDK user>>\"\n        },\n        \"domain\": \"mxp\",\n        \"custom\": \"Voice API Postman conferenceCallout sample username InApp\",\n        \"conferenceId\": \"VoiceAPIPostman\",\n        \"enableAce\": false,\n        \"enableDice\": true\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://calling.api.sinch.com/calling/v1/callouts",
+					"protocol": "https",
+					"host": [
+						"calling",
+						"api",
+						"sinch",
+						"com"
+					],
+					"path": [
+						"calling",
+						"v1",
+						"callouts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConferenceCallout number",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true,
+					"content-length": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"method\": \"conferenceCallout\",\n    \"conferenceCallout\": {\n        \"cli\": \"<<Your verified / Dashboard purchased number>>\",\n        \"destination\": {\n            \"type\": \"number\",\n            \"endpoint\": \"<<The destination number to call>>\"\n        },\n        \"domain\": \"pstn\",\n        \"custom\": \"Voice API Postman conferenceCallout sample number\",\n        \"conferenceId\": \"VoiceAPIPostman\",\n        \"enableAce\": false,\n        \"enableDice\": true\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://calling.api.sinch.com/calling/v1/callouts",
+					"protocol": "https",
+					"host": [
+						"calling",
+						"api",
+						"sinch",
+						"com"
+					],
+					"path": [
+						"calling",
+						"v1",
+						"callouts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ttsCallout Emma",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"method\": \"ttsCallout\",\n    \"ttsCallout\": {\n        \"cli\": \"<<Your verified / Dashboard purchased number>>\",\n        \"destination\": {\n            \"type\": \"number\",\n            \"endpoint\": \"<<The destination number to call>>\"\n        },\n        \"locale\": \"Emma\",\n        \"prompts\": \"#ssml[<speak><break time='1s'/>This is a test.<break strength='strong'/><prosody rate='90%'>You must cut down the mightiest tree in the forest,<p>with a herring</p></prosody></speak>];\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://calling.api.sinch.com/calling/v1/callouts",
+					"protocol": "https",
+					"host": [
+						"calling",
+						"api",
+						"sinch",
+						"com"
+					],
+					"path": [
+						"calling",
+						"v1",
+						"callouts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get information about call",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://calling.api.sinch.com/calling/v1/calls/id/{{callid}}",
+					"protocol": "https",
+					"host": [
+						"calling",
+						"api",
+						"sinch",
+						"com"
+					],
+					"path": [
+						"calling",
+						"v1",
+						"calls",
+						"id",
+						"{{callid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query Number",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callingapi.sinch.com/v1/calling/query/number/{{number}}",
+					"protocol": "https",
+					"host": [
+						"callingapi",
+						"sinch",
+						"com"
+					],
+					"path": [
+						"v1",
+						"calling",
+						"query",
+						"number",
+						"{{number}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kick Conference All",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Cache-Control",
+						"value": "max=1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://calling.api.sinch.com/calling/v1/conferences/id/{{conferenceid}}",
+					"protocol": "https",
+					"host": [
+						"calling",
+						"api",
+						"sinch",
+						"com"
+					],
+					"path": [
+						"calling",
+						"v1",
+						"conferences",
+						"id",
+						"{{conferenceid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kick Conference Participant",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://calling.api.sinch.com/calling/v1/conferences/id/{{conferenceid}}/{{callid}}",
+					"protocol": "https",
+					"host": [
+						"calling",
+						"api",
+						"sinch",
+						"com"
+					],
+					"path": [
+						"calling",
+						"v1",
+						"conferences",
+						"id",
+						"{{conferenceid}}",
+						"{{callid}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"/*",
+					" Pre-request script for application signing towards the Sinch Calling API for use with Postman",
+					" Useage: In the containing folder of you API call create two varialbes appKey and appSecret",
+					"         with you application key and secret",
+					"         Place this script in the Pre-request Script tab of your API call and",
+					"         have",
+					"         * Type No Auth in the Authorization tab",
+					"         * No Content-Type headers sent by Postman",
+					"*/",
+					"",
+					"var appKey = pm.variables.get(\"appKey\")",
+					"var appSecret = pm.variables.get(\"appSecret\")",
+					"var URI = pm.request.url.getPath();",
+					"var HTTPVerb = pm.request.method;",
+					"var data = pm.request.body;",
+					"var requestBody = data[data.mode];",
+					"var contentLength = encodeURI(requestBody).split(/%..|./).length - 1;",
+					"console.log(\"Request Body is : \" + requestBody);",
+					"console.log(\"URI : \" + URI);",
+					"if (requestBody != undefined){",
+					"    console.log('HTTP req is ' + HTTPVerb)",
+					"    var contentMD5 = CryptoJS.MD5(requestBody.toString(CryptoJS.enc.Utf8)).toString(CryptoJS.enc.Base64);",
+					"    var contentMD5 = `${contentMD5}\\n`;",
+					"    var canonicalResource = URI;",
+					"    console.log(\"ContentMD5 sum is : \" + contentMD5);",
+					"    pm.request.headers.add({",
+					"    key: 'Content-Length',",
+					"    value: contentLength});",
+					"} else {",
+					"    console.log('HTTP req is ' + HTTPVerb)",
+					"    var contentMD5 = '\\n';",
+					"    var canonicalResource = URI;",
+					"    console.log(\"ContentMD5 sum is: \" + contentMD5);",
+					"}",
+					"var timeStampISO = new Date().toISOString().split('.')[0] + 'Z';",
+					"var stringToSign = HTTPVerb + '\\n' +",
+					"    contentMD5 +",
+					"    'application/json; charset=UTF-8' + '\\n' +",
+					"    'x-timestamp:' + timeStampISO + '\\n' +",
+					"    canonicalResource;",
+					"    console.log(\"String to sign is: \" + stringToSign);",
+					"var secretDecoded = CryptoJS.enc.Base64.parse(appSecret);",
+					"var hmac = CryptoJS.algo.HMAC.create(CryptoJS.algo.SHA256, secretDecoded);",
+					"hmac.update(stringToSign.toString(CryptoJS.enc.Utf8));",
+					"var signature = hmac.finalize();",
+					"var signedHeader = 'application ' + appKey + ':' + signature.toString(CryptoJS.enc.Base64);",
+					"",
+					"pm.request.headers.add({",
+					"key: 'x-timestamp',",
+					"value: timeStampISO",
+					"});",
+					"",
+					"pm.request.headers.add({",
+					"  key: 'authorization',",
+					"  value: signedHeader.toString(CryptoJS.enc.Utf8)",
+					"});",
+					"",
+					"pm.request.headers.add({",
+					"key: 'content-type',",
+					"value: 'application/json; charset=UTF-8'",
+					"});",
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "appSecret",
+			"value": "Your application secret",
+			"type": "string"
+		},
+		{
+			"key": "appKey",
+			"value": "Your application key",
+			"type": "string"
+		},
+		{
+			"key": "insert a conferenceid",
+			"value": "PostmanConf123",
+			"type": "string"
+		},
+		{
+			"key": "insert a number",
+			"value": "+4600000001",
+			"type": "string"
+		}
+	]
+}
