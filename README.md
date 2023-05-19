@@ -14,7 +14,7 @@ This Postman collection is a sample set of Sinch Voice API requests using applic
 
     ![Import into Postman, press import ](assets/Collection_Sinch_Voice.png)
 
-Drag or select the collection from this repository ```Voice-API-application-signed.postman_collection.json``` into the import dialog.
+2. Drag or select the collection from this repository ```Voice-API-application-signed.postman_collection.json``` into the import dialog.
 
     ![Import into Postman, import dialog](assets/Import.png)
 
