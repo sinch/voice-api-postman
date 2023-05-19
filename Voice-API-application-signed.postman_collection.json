@@ -327,23 +327,13 @@
 	],
 	"variable": [
 		{
-			"key": "appSecret",
-			"value": "Your application secret",
-			"type": "string"
-		},
-		{
 			"key": "appKey",
 			"value": "Your application key",
 			"type": "string"
 		},
 		{
-			"key": "insert a conferenceid",
-			"value": "PostmanConf123",
-			"type": "string"
-		},
-		{
-			"key": "insert a number",
-			"value": "+4600000001",
+			"key": "appSecret",
+			"value": "Your application secret",
 			"type": "string"
 		}
 	]
