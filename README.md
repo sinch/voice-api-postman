@@ -26,13 +26,7 @@ This Postman collection is a sample set of Sinch Voice API requests using applic
 
     ![Import into Postman, collection menu](assets/Variables.png)
 
-5. Add the rest of the following variables:
-
-    ![Import into Postman, request callout body](assets/Request_Body_Callout.png)
-
-You can now send a request.
-
-### Items to change in the POST examples
+### Items to change for your values in the POST examples
 
 * ```cli:``` Your verified / Dashboard purchased number
 * ```endpoint:``` The destination number to call
@@ -40,7 +34,7 @@ You can now send a request.
 
 ![Import into Postman, request callout body](assets/Request_Body_Callout.png)
 
-### Items to change in the GET / DELETE examples
+### Items to change for your values in the GET / DELETE examples
 
 Postman variables are used, but do not resolve to any values, please replace the variables in place (the actual URLs) to use correctly
 
